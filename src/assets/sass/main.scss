@@ -3,3 +3,40 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+.container-fluid, .row, .left-container {
+  height: 100%;
+}
+
+.left-container {
+  display: table;
+  position: fixed;
+
+  .left-section {
+    display: table-cell;
+    vertical-align: middle;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    .menu {
+      margin: 50px 0;
+      padding: 25px 0;
+      border-top: 1px solid #cccccc;
+      border-bottom: 1px solid #cccccc;
+    }
+  }
+}
+
+.right-container {
+  float: right;
+}
+
+ul {
+  list-style: none;
+}
+
+@media screen and (max-width: 640px) {
+  .right-container {
+    float: left;
+  }
+}

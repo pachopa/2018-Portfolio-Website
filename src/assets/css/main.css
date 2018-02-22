@@ -2,3 +2,28 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0; }
+
+.container-fluid, .row, .left-container {
+  height: 100%; }
+
+.left-container {
+  display: table;
+  position: fixed; }
+  .left-container .left-section {
+    display: table-cell;
+    vertical-align: middle; }
+    .left-container .left-section .menu {
+      margin: 50px 0;
+      padding: 25px 0;
+      border-top: 1px solid #cccccc;
+      border-bottom: 1px solid #cccccc; }
+
+.right-container {
+  float: right; }
+
+ul {
+  list-style: none; }
+
+@media screen and (max-width: 640px) {
+  .right-container {
+    float: left; } }
