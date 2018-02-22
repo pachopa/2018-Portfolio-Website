@@ -13,29 +13,49 @@ html, body {
   position: fixed;
 
   .left-section {
+    padding: 15%;
     display: table-cell;
     vertical-align: middle;
-    // position: fixed;
-    // top: 0;
-    // left: 0;
     .menu {
-      margin: 50px 0;
+      margin: 30px 0 10px 0;
       padding: 25px 0;
       border-top: 1px solid #cccccc;
       border-bottom: 1px solid #cccccc;
+    }
+    .social {
+      padding: 25px 0 10px 0;
+      display: -webkit-inline-box;
+    }
+    .social-list {
+      margin-right: 10px;
     }
   }
 }
 
 .right-container {
   float: right;
+  height: 100%;
+  .work-picture {
+    width: 80%;
+    height: 40%;
+    display: block;
+    margin: 50px auto 50px auto;
+  }
+}
+
+.right-container:after {
+  clear: both;
 }
 
 ul {
   list-style: none;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 767px) {
+  .left-container {
+    position: initial;
+    height: 70%;
+  }
   .right-container {
     float: left;
   }
