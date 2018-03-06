@@ -28,10 +28,26 @@ html, body {
   float: right;
   height: 100%; }
   .right-container .work-picture {
-    width: 80%;
+    width: 90%;
     height: 40%;
     display: block;
     margin: 50px auto 50px auto; }
+  .right-container .education, .right-container .about-me, .right-container .right-section {
+    width: 90%;
+    background-color: #f5f5f5;
+    display: block;
+    margin: 50px auto 50px auto; }
+  .right-container .right-section {
+    padding: 7%; }
+  .right-container label {
+    width: 100%; }
+  .right-container .userName, .right-container .userEmail, .right-container .message {
+    width: 50%; }
+  .right-container .typed, .right-container .typed2, .right-container .typed3 {
+    float: left; }
+
+.typed:after, .typed2:after, .typed3:after {
+  clear: both; }
 
 .right-container:after {
   clear: both; }

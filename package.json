@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/pachopa/2018-Portfolio-Website#readme",
   "dependencies": {
-    "node-sass": "^4.7.2"
+    "node-sass": "^4.7.2",
+    "type.js": "0.0.1"
   }
 }
