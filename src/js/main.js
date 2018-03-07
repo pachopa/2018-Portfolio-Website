@@ -38,6 +38,20 @@
     fadeOut: true,
     fadeOutDelay: 20000,
     smartBackspace: false,
-  })
+  });
+
+  //recover overlay class
+  function connectPage() {
+    $('.overlay').removeClass("active");
+  }
+  //overlay add clss
+  $(".overlay-button").click(function () {
+    $('.overlay').addClass("active");
+    setTimeout(() => {
+      connectPage()
+    }, 1000);
+  });
+
+
 
 })(jQuery);
