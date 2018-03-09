@@ -39,25 +39,38 @@
     fadeOutDelay: 20000,
     smartBackspace: false,
   });
-  //recover overlay class
-  function connectPage() {
-    $('.overlay').removeClass("active");
-  }
 
+  $(window).load(function (e) {
+    setTimeout(() => {
+      $('.overlay').removeClass("firstLoading");
+    }, 700);
+  })
   //window load
-  $( window ).load(function() {
-    $('.overlay').addClass("active");
+  function removeLoadingClass(url) {
     setTimeout(() => {
-      connectPage()
-    }, 1000);
+      $('.overlay').removeClass("firstLoading");
+      window.history.pushState({ path: url }, '', url);
+    }, 700);
+  }
+ 
+
+  $('a.link-page').click(function (e) {
+    e.preventDefault();
+    const url = $(this).attr("href");
+    $('.overlay').addClass("firstLoading");
+    $('.overlay').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+      function (e) {
+        window.location.href = url;
+        removeLoadingClass(url)
+      });
   });
-  
-  //overlay add clss
-  $(".overlay-button").click(function () {
-    $('.overlay').addClass("active");
-    setTimeout(() => {
-      connectPage()
-    }, 1200);
+
+  $(window).on('popstate', function () {
+    console.log("chris");
+    // var newPageArray = location.pathname.split('/'),
+    //     //this is the url of the page to be loaded 
+    //     newPage = newPageArray[newPageArray.length - 1];
+    // if( !isAnimating ) changePage(newPage);
   });
 
 })(jQuery);
