@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'geomanistregular';
+  src: url("geomanist-regular-webfont.eot");
+  src: url("geomanist-regular-webfont.eot?#iefix") format("embedded-opentype"), url("geomanist-regular-webfont.woff2") format("woff2"), url("geomanist-regular-webfont.woff") format("woff"), url("geomanist-regular-webfont.ttf") format("truetype"), url("geomanist-regular-webfont.svg#geomanistregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 html, body {
   height: 100%;
   margin: 0;
@@ -26,17 +33,14 @@ html, body {
 
 .right-container {
   float: right;
-  height: 100%; }
+  background: #ece9e7; }
   .right-container .work-picture {
     width: 90%;
     height: 40%;
     display: block;
     margin: 50px auto 50px auto; }
   .right-container .education, .right-container .about-me, .right-container .right-section {
-    width: 90%;
-    background-color: #f5f5f5;
-    display: block;
-    margin: 50px auto 50px auto; }
+    display: block; }
   .right-container .right-section {
     padding: 7%; }
   .right-container label {
@@ -45,6 +49,14 @@ html, body {
     width: 50%; }
   .right-container .typed, .right-container .typed2, .right-container .typed3 {
     float: left; }
+
+.skills {
+  background: #ece9e7;
+  color: #181818;
+  font-family: 'geomanistregular'; }
+  .skills .skills-content {
+    display: block;
+    margin: 50px auto; }
 
 .typed:after, .typed2:after, .typed3:after {
   clear: both; }

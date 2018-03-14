@@ -45,19 +45,19 @@
       $('.overlay').removeClass("firstLoading");
     }, 700);
   })
+
   //window load
   function removeLoadingClass(url) {
     setTimeout(() => {
       $('.overlay').removeClass("firstLoading");
-      window.history.pushState({ path: url }, '', url);
     }, 700);
   }
- 
 
   $('a.link-page').click(function (e) {
     e.preventDefault();
     const url = $(this).attr("href");
     $('.overlay').addClass("firstLoading");
+    window.history.pushState(url, null, url);
     $('.overlay').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
       function (e) {
         window.location.href = url;
@@ -65,12 +65,17 @@
       });
   });
 
-  $(window).on('popstate', function () {
-    console.log("chris");
-    // var newPageArray = location.pathname.split('/'),
-    //     //this is the url of the page to be loaded 
-    //     newPage = newPageArray[newPageArray.length - 1];
-    // if( !isAnimating ) changePage(newPage);
-  });
+  if (window.history && window.history.pushState) {
+    $(window).on('popstate', function () {
+      const urlPath = window.location.pathname.split("/");
+      const url = urlPath[1];
+      $('.overlay').addClass("firstLoading");
+      $('.overlay').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+        function (e) {
+          window.location.href = url;
+          removeLoadingClass(url)
+        });
+    });
+  }
 
 })(jQuery);
