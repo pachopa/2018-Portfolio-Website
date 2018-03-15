@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Italianno");
 @font-face {
   font-family: 'geomanistregular';
   src: url("geomanist-regular-webfont.eot");
@@ -59,13 +60,28 @@ html, body {
   padding: 0; }
   .skills .skills-content {
     display: block;
-    margin: 50px auto;
-    padding: 4%; }
-    .skills .skills-content .skills-title {
+    margin: 0;
+    padding: 6%; }
+    .skills .skills-content .skills-title a {
       font-size: 3em;
       color: #444443; }
+    .skills .skills-content .skills-title a:hover {
+      text-decoration: none; }
+    .skills .skills-content .skills-description {
+      text-align: right;
+      margin-right: 20%;
+      padding-top: 2.5%; }
+      .skills .skills-content .skills-description .see-in-detail {
+        font-family: 'Italianno', geomanistregular, sans-serif;
+        color: #444443;
+        text-decoration: none;
+        font-size: 1.5em; }
   .skills .skills-content.hover {
-    background: #f2f2f2; }
+    background: #f2f2f2;
+    color: #b3a577; }
+    .skills .skills-content.hover .skills-title a, .skills .skills-content.hover .see-in-detail {
+      color: #b3a577;
+      text-decoration: none; }
 
 .typed:after, .typed2:after, .typed3:after {
   clear: both; }
@@ -136,6 +152,15 @@ ul {
   transition: all 0.8s ease-in-out; }
 
 @media screen and (max-width: 691px) {
+  .right-overlay {
+    width: 100%;
+    height: 0;
+    background: white;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+    transition: all 0.8s ease-in-out; }
   .right-overlay.active {
     position: fixed;
     bottom: 0;
@@ -165,3 +190,64 @@ ul.skills-title li:after {
 
 ul.skills-title::after {
   clear: both; }
+
+.wrapper {
+  display: block;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  align-items: center;
+  justify-content: center; }
+
+.close-button {
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  overflow: hidden; }
+  .close-button > div {
+    position: relative; }
+  .close-button-block {
+    width: 40px;
+    height: 20px;
+    position: relative;
+    overflow: hidden; }
+    .close-button-block:before, .close-button-block:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: calc(55% - 4px);
+      display: block;
+      width: 4px;
+      height: 25px;
+      transform-origin: bottom center;
+      background: #d8d7d6;
+      transition: all ease-out 280ms; }
+    .close-button-block:last-of-type {
+      transform: rotate(180deg); }
+  .close-button .in .close-button-block:before {
+    background: #333;
+    transition-delay: 280ms;
+    transform: translateX(20px) translateY(-20px) rotate(45deg); }
+  .close-button .in .close-button-block:after {
+    background: #333;
+    transition-delay: 280ms;
+    transform: translateX(-22px) translateY(-22px) rotate(-45deg); }
+  .close-button .out {
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .close-button .out .close-button-block:before {
+      background: #d8d7d6;
+      transform: translateX(-5px) translateY(5px) rotate(45deg); }
+    .close-button .out .close-button-block:after {
+      background: #d8d7d6;
+      transform: translateX(5px) translateY(5px) rotate(-45deg); }
+  .close-button:hover .in .close-button-block:before {
+    transform: translateX(-5px) translateY(5px) rotate(45deg); }
+  .close-button:hover .in .close-button-block:after {
+    transform: translateX(5px) translateY(5px) rotate(-45deg); }
+  .close-button:hover .out .close-button-block:before {
+    transform: translateX(-20px) translateY(20px) rotate(45deg); }
+  .close-button:hover .out .close-button-block:after {
+    transform: translateX(20px) translateY(20px) rotate(-45deg); }

@@ -71,15 +71,35 @@ html, body {
   padding: 0;
   .skills-content {
     display: block;
-    margin: 50px auto;
-    padding: 4%;
-    .skills-title {
+    margin: 0;
+    padding: 6%;
+    .skills-title a{
       font-size: 3em;
       color: #444443;
     }
+    .skills-title a:hover {
+      text-decoration: none;
+    }
+    .skills-description {
+      text-align: right;
+      margin-right: 20%;
+      padding-top: 2.5%;
+      .see-in-detail {
+        font-family: 'Italianno', geomanistregular, sans-serif;
+        color: #444443;
+        text-decoration: none;
+        font-size: 1.5em;
+      }
+    }
   }
-  .skills-content.hover {
+  .skills-content.hover, {
     background: #f2f2f2;
+    color: #b3a577;
+    .skills-title a, .see-in-detail {
+      color: #b3a577;
+      text-decoration: none;
+    }
+
   }
 }
 

@@ -1,4 +1,3 @@
-
 (function ($) {
   //contactForm 
   $('button.sendButton').click(function () {
@@ -79,7 +78,7 @@
   }
 
   //right overlay for skills.html
-  $('.skills-title a').click(function (e) {
+  $('.skills-title a, .see-in-detail').click(function (e) {
     e.preventDefault();
     $('.right-overlay').addClass("active");
     $('.left-container').addClass("inactive");
@@ -91,14 +90,22 @@
       $('.right-overlay').removeClass("active");
       $('.left-container').removeClass("inactive");
     }
-
   })
 
-  //test
-  $('.exit').click(function () {
+  //close button on skills.html
+  $('.wrapper .close-button').click(function (e) {
+    e.preventDefault();
     $('.right-overlay').removeClass("active");
     $('.left-container').removeClass("inactive");
   })
+
+
+
+  $('.overlay').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+        function (e) {
+          window.location.href = url;
+          removeLoadingClass(url)
+        });
 
   // change the background when mouseenter in the zone
   $('.skills-content')
