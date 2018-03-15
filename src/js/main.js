@@ -78,4 +78,34 @@
     });
   }
 
+  //right overlay for skills.html
+  $('.skills-title a').click(function (e) {
+    e.preventDefault();
+    $('.right-overlay').addClass("active");
+    $('.left-container').addClass("inactive");
+  })
+
+  //when click outside of overlay zone, remove class
+  $('.left-container').click(function () {
+    if ($(this).hasClass('inactive')) {
+      $('.right-overlay').removeClass("active");
+      $('.left-container').removeClass("inactive");
+    }
+
+  })
+
+  //test
+  $('.exit').click(function () {
+    $('.right-overlay').removeClass("active");
+    $('.left-container').removeClass("inactive");
+  })
+
+  // change the background when mouseenter in the zone
+  $('.skills-content')
+    .mouseenter(function () {
+      $(this).addClass('hover');
+    })
+    .mouseleave(function () {
+      $(this).removeClass('hover');
+    })
 })(jQuery);

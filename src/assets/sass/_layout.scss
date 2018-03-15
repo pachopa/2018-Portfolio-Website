@@ -5,11 +5,6 @@ html, body {
   margin: 0;
   padding: 0;
 }
-//write some code later
-p {
-  
-}
-
 
 .container-fluid, .row, .left-container {
   height: 100%;
@@ -18,7 +13,7 @@ p {
 .left-container {
   display: table;
   position: fixed;
-
+  transition: all 0.8s ease-in-out;
   .left-section {
     padding: 15%;
     display: table-cell;
@@ -72,11 +67,20 @@ p {
   background: #ece9e7;
   color: #181818;
   font-family: 'geomanistregular';
+  font-weight: bold;
+  padding: 0;
   .skills-content {
     display: block;
     margin: 50px auto;
+    padding: 4%;
+    .skills-title {
+      font-size: 3em;
+      color: #444443;
+    }
   }
-
+  .skills-content.hover {
+    background: #f2f2f2;
+  }
 }
 
 

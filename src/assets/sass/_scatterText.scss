@@ -1,0 +1,39 @@
+// <div class="skills-content">
+//   <div class="skills-name">Languages</div>
+//   <div class="skills-title">Html, Css, Javascript, and Ruby on Rails</div>
+//   <div class="skills-title">I have strong knowledge in advanced Html, Css, and Javascript , and Ruby on Rails.
+//   </div>
+//   <ul class="skills-description">
+//     <li class="inactive">I have a strong knowledge in advanced</li>
+//     <li>Html, css,</li>
+//     <li class="inactive">and</li>
+//     <li>Javascript</li>
+//     <li>and Ruby on Rails</li>
+//     <li class="inactive">Especially, I have experienced to build a single page web application as well as node.js, restful api and ETC
+//       in many with javascript.</li>
+//     <li></li>
+//   </ul>
+// </div>
+
+.skills-content {
+  clear: both;
+}
+ul.skills-title {
+  li {
+    display: inline-block;
+    float: left;
+    opacity: 1;
+    transition: all 1.5s ease-in-out;
+    max-width: 100%;
+  }
+  li.inactive {
+    opacity: 0;
+    max-width: 30%;
+  }
+  li:after{
+    clear: both;
+  }
+}
+ul.skills-title::after {
+  clear: both;
+}
