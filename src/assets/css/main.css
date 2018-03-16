@@ -11,6 +11,13 @@ html, body {
   margin: 0;
   padding: 0; }
 
+a {
+  color: #181818;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
 .container-fluid, .row, .left-container {
   height: 100%; }
 
@@ -35,7 +42,8 @@ html, body {
 
 .right-container {
   float: right;
-  background: #ece9e7; }
+  background: #ece9e7;
+  font-family: 'geomanistregular'; }
   .right-container .work-picture {
     width: 90%;
     height: 40%;
@@ -43,14 +51,26 @@ html, body {
     margin: 50px auto 50px auto; }
   .right-container .education, .right-container .about-me, .right-container .right-section {
     display: block; }
-  .right-container .right-section {
-    padding: 7%; }
   .right-container label {
     width: 100%; }
   .right-container .userName, .right-container .userEmail, .right-container .message {
     width: 50%; }
   .right-container .typed, .right-container .typed2, .right-container .typed3 {
     float: left; }
+
+.right-container.contact-me {
+  height: 100%;
+  padding: 3%; }
+  .right-container.contact-me .contact-me-section p {
+    margin-bottom: 5%; }
+  .right-container.contact-me .contact-me-section .intro {
+    font-size: 6em;
+    text-align: center;
+    color: #b3a577; }
+  .right-container.contact-me .contact-me-section .intro-des, .right-container.contact-me .contact-me-section .my-profile {
+    font-size: 2em; }
+  .right-container.contact-me .contact-me-section .my-profile {
+    color: #b3a577; }
 
 .skills {
   background: #ece9e7;
@@ -65,7 +85,7 @@ html, body {
     .skills .skills-content .skills-title a {
       font-size: 3em;
       color: #444443; }
-    .skills .skills-content .skills-title a:hover {
+    .skills .skills-content .skills-title a:hover, .skills .skills-content .skills-title a:focus {
       text-decoration: none; }
     .skills .skills-content .skills-description {
       text-align: right;
@@ -80,6 +100,9 @@ html, body {
     background: #f2f2f2;
     color: #b3a577; }
     .skills .skills-content.hover .skills-title a, .skills .skills-content.hover .see-in-detail {
+      color: #b3a577;
+      text-decoration: none; }
+    .skills .skills-content.hover .skills-title a:hover {
       color: #b3a577;
       text-decoration: none; }
 
@@ -136,6 +159,8 @@ ul {
   right: 0;
   z-index: 5;
   transition: all 0.8s ease-in-out; }
+  .right-overlay .wrapper, .right-overlay #content1, .right-overlay #content2, .right-overlay #content3, .right-overlay #content4, .right-overlay #content5, .right-overlay #content6, .right-overlay #content7, .right-overlay #content8 {
+    display: none; }
 
 .right-overlay.active {
   position: fixed;
@@ -150,6 +175,17 @@ ul {
 .left-container.inactive {
   background: rgba(0, 0, 0, 0.2);
   transition: all 0.8s ease-in-out; }
+
+.content-wrapper {
+  padding: 7%;
+  font-family: 'geomanistregular', sans-serif; }
+  .content-wrapper .content-title {
+    margin-top: 20%;
+    font-size: 1.8em; }
+  .content-wrapper .content-description {
+    margin-top: 5%;
+    font-size: 1.5em;
+    letter-spacing: 1px; }
 
 @media screen and (max-width: 691px) {
   .right-overlay {
@@ -170,26 +206,6 @@ ul {
     background: white;
     transition: all 0.8s ease-in-out;
     opacity: 1; } }
-
-.skills-content {
-  clear: both; }
-
-ul.skills-title li {
-  display: inline-block;
-  float: left;
-  opacity: 1;
-  transition: all 1.5s ease-in-out;
-  max-width: 100%; }
-
-ul.skills-title li.inactive {
-  opacity: 0;
-  max-width: 30%; }
-
-ul.skills-title li:after {
-  clear: both; }
-
-ul.skills-title::after {
-  clear: both; }
 
 .wrapper {
   display: block;

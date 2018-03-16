@@ -1,30 +1,4 @@
 (function ($) {
-  //contactForm 
-  $('button.sendButton').click(function () {
-    var $contactForm = $('#contactForm');
-    var $contactFormFeedBack = '';
-    var name = $('.userName').val();
-    var email = $('.userEmail').val();
-    var message = $('.message').val();
-    if (name == '' || email == '' || message == '') {
-      console.log("chris")
-      $('.thankMsg').fadeIn().text('Fill in the all blank, please :D');
-    } else {
-      $.ajax({
-        type: "POST",
-        url: "send-email.php",
-        data: { name: name, email: email, message: message }
-      }).success(function (html) {
-        $('.thankMsg').fadeIn().text('Thank you for your email!');
-        $('.userName').val('');
-        $('.userEmail').val('');
-        $('.message').val('');
-      }).error(function (html) {
-        console.log("error")
-      })
-    }
-  });
-
   $(".typed").typed({
     strings: [`hello`, 'hi', 'chris'],
     typeSpeed: 600,
@@ -77,35 +51,52 @@
     });
   }
 
+  //content-wrapper
+  function contentWrapper(id) {
+    // console.log(id, "chris 82")
+    $('.wrapper').fadeIn(600, function () {
+      $(`#${id}`).fadeIn(600);
+    })
+  }
+
   //right overlay for skills.html
   $('.skills-title a, .see-in-detail').click(function (e) {
     e.preventDefault();
-    $('.right-overlay').addClass("active");
+    const id = $(this).attr('id');
+    $('.right-overlay').addClass("active").one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+      function (e) {
+        contentWrapper(id);
+      });
     $('.left-container').addClass("inactive");
+    $("body").css("overflow", "hidden");
   })
 
   //when click outside of overlay zone, remove class
   $('.left-container').click(function () {
     if ($(this).hasClass('inactive')) {
-      $('.right-overlay').removeClass("active");
-      $('.left-container').removeClass("inactive");
+      let id = $(`.content-wrapper div`).attr("id");
+      console.log(id, "chris106")
+      $('.wrapper').fadeOut(300, function () {
+        $(`#${id}`).fadeOut(300, function () {
+          $('.right-overlay').removeClass("active");
+          $('.left-container').removeClass("inactive");
+        })
+      })
     }
+    $("body").css("overflow", "auto");
   })
 
   //close button on skills.html
   $('.wrapper .close-button').click(function (e) {
     e.preventDefault();
-    $('.right-overlay').removeClass("active");
-    $('.left-container').removeClass("inactive");
+    $('.wrapper').fadeOut(300, function () {
+      $('.content-wrapper').fadeOut(300, function () {
+        $('.right-overlay').removeClass("active");
+        $('.left-container').removeClass("inactive");
+      })
+    })
+    $("body").css("overflow", "auto");
   })
-
-
-
-  $('.overlay').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
-        function (e) {
-          window.location.href = url;
-          removeLoadingClass(url)
-        });
 
   // change the background when mouseenter in the zone
   $('.skills-content')
