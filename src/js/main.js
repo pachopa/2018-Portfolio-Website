@@ -55,7 +55,7 @@
   function contentWrapper(id) {
     // console.log(id, "chris 82")
     $('.wrapper').fadeIn(600, function () {
-      $(`#${id}`).fadeIn(600);
+      $(`.content-wrapper #${id}`).fadeIn(600).addClass("active");
     })
   }
 
@@ -74,13 +74,20 @@
   //when click outside of overlay zone, remove class
   $('.left-container').click(function () {
     if ($(this).hasClass('inactive')) {
-      let id = $(`.content-wrapper div`).attr("id");
-      console.log(id, "chris106")
-      $('.wrapper').fadeOut(300, function () {
-        $(`#${id}`).fadeOut(300, function () {
-          $('.right-overlay').removeClass("active");
-          $('.left-container').removeClass("inactive");
-        })
+      $(".content-wrapper").find('div').each(function (i, obj) {
+        if ($(obj).hasClass('active')) {
+          const id = $(obj).attr('id');
+          $('.wrapper').fadeOut(300, function () {
+            $(`#${id}`).fadeOut(300, function () {
+              $('.right-overlay').removeClass("active").one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+                function (e) {
+                  $('.wrapper').hide().removeClass('active');
+                  $(`#${id}`).hide().removeClass('active')
+                });
+              $('.left-container').removeClass("inactive");
+            })
+          })
+        }
       })
     }
     $("body").css("overflow", "auto");
@@ -89,11 +96,20 @@
   //close button on skills.html
   $('.wrapper .close-button').click(function (e) {
     e.preventDefault();
-    $('.wrapper').fadeOut(300, function () {
-      $('.content-wrapper').fadeOut(300, function () {
-        $('.right-overlay').removeClass("active");
-        $('.left-container').removeClass("inactive");
-      })
+    $(".content-wrapper").find('div').each(function (i, obj) {
+      if ($(obj).hasClass('active')) {
+        const id = $(obj).attr('id');
+        $('.wrapper').fadeOut(300, function () {
+          $(`#${id}`).fadeOut(300, function () {
+            $('.right-overlay').removeClass("active").one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+              function (e) {
+                $('.wrapper').hide().removeClass('active');
+                $(`#${id}`).hide().removeClass('active')
+              });
+            $('.left-container').removeClass("inactive");
+          })
+        })
+      }
     })
     $("body").css("overflow", "auto");
   })

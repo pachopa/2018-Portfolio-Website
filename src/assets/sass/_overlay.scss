@@ -85,6 +85,9 @@
     right: 0;
     z-index: 5;
     transition: all 0.8s ease-in-out;
+    .wrapper, #content1, #content2, #content3, #content4, #content5, #content6, #content7, #content8 {
+      display: none;
+    }
   }
 
   .right-overlay.active {

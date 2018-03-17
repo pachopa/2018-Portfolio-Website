@@ -23,19 +23,34 @@ a:hover {
   display: table;
   position: fixed;
   transition: all 0.8s ease-in-out;
+  font-family: 'geomanistregular', sans-serif;
   .left-section {
-    padding: 15%;
+    padding: 12%;
     display: table-cell;
     vertical-align: middle;
+    .my-name {
+      font-size: 3.5em;
+      color: #b3a577;
+      font-weight: bold;
+    }
+    .position-title {
+      font-size: 2em;
+      color: #b3a577;
+      font-weight: bold;
+    }
     .menu {
       margin: 30px 0 10px 0;
       padding: 25px 0;
       border-top: 1px solid #cccccc;
       border-bottom: 1px solid #cccccc;
+      font-size: 1.5em;
+      width: 90%;
     }
     .social {
       padding: 25px 0 10px 0;
       display: -webkit-inline-box;
+      font-size: 1.5em;
+      color: #b3a577;
     }
     .social-list {
       margin-right: 10px;
@@ -47,7 +62,7 @@ a:hover {
 .right-container {
   float: right;
   background: #ece9e7;
-  font-family: 'geomanistregular';
+  font-family: 'geomanistregular', sans-serif;
   .work-picture {
     width: 90%;
     height: 40%;
@@ -84,7 +99,7 @@ a:hover {
     .intro-des, .my-profile {
       font-size: 2em;
     }
-    .my-profile {
+    .my-profile, .my-profile a{
       color: #b3a577;
     }
   }
@@ -112,7 +127,7 @@ a:hover {
       margin-right: 20%;
       padding-top: 2.5%;
       .see-in-detail {
-        font-family: 'Italianno', geomanistregular, sans-serif;
+        font-family: 'geomanistregular', sans-serif;
         color: #444443;
         text-decoration: none;
         font-size: 1.5em;
