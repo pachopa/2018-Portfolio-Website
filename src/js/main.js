@@ -60,8 +60,9 @@
   }
 
   //right overlay for skills.html
-  $('.skills-title a, .see-in-detail').click(function (e) {
+  $('.skills-title a, .see-in-detail, .work-content').click(function (e) {
     e.preventDefault();
+    console.log("chris65")
     const id = $(this).attr('id');
     $('.right-overlay').addClass("active").one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
       function (e) {
@@ -122,4 +123,5 @@
     .mouseleave(function () {
       $(this).removeClass('hover');
     })
+  
 })(jQuery);

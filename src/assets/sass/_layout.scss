@@ -63,12 +63,6 @@ a:hover {
   float: right;
   background: #ece9e7;
   font-family: 'geomanistregular', sans-serif;
-  .work-picture {
-    width: 90%;
-    height: 40%;
-    display: block;
-    margin: 50px auto 50px auto;
-  }
   .education, .about-me, .right-section {
     display: block;
   }
@@ -104,7 +98,42 @@ a:hover {
     }
   }
 }
+.work {
+  background: #ece9e7;
+  color: #444443;
+  font-family: 'geomanistregular';
+  font-weight: bold;
+  padding: 0;
+  .work-content {
+    display: block;
+    margin: 0;
+    padding: 6%;
+    .work-title {
+      font-size: 2.5em;
+    }
+    .content2 {
+      font-size: 2em;
+    }
+    .work-description {
+      text-align: right;
+      margin-right: 20%;
+      padding-top: 2.5%;
+      font-size: 1.2em;
+    }
+  }
+}
+.work-content:hover, .work-content:focus {
+  cursor: pointer;
+}
+.doduart:focus, .doduart:hover {
+  background-image: url("../../../public/dodu_art.jpg");
+  background-size: 100% 100%;
+  color: #fefefe;
+  a {
+   color: #fefefe;
 
+  }
+}
 .skills {
   background: #ece9e7;
   color: #181818;
