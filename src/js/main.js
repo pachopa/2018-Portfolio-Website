@@ -53,16 +53,14 @@
 
   //content-wrapper
   function contentWrapper(id) {
-    // console.log(id, "chris 82")
     $('.wrapper').fadeIn(600, function () {
       $(`.content-wrapper #${id}`).fadeIn(600).addClass("active");
     })
   }
 
-  //right overlay for skills.html
+  //right overlay for skills.html & work.html
   $('.skills-title a, .see-in-detail, .work-content').click(function (e) {
     e.preventDefault();
-    console.log("chris65")
     const id = $(this).attr('id');
     $('.right-overlay').addClass("active").one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
       function (e) {
@@ -70,6 +68,7 @@
       });
     $('.left-container').addClass("inactive");
     $("body").css("overflow", "hidden");
+    $(".right-overlay").css("overflow", "auto");
   })
 
   //when click outside of overlay zone, remove class

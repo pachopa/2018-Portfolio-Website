@@ -110,6 +110,41 @@ a:hover {
   .doduart:focus a, .doduart:hover a {
     color: #fefefe; }
 
+.korean-agency:focus, .korean-agency:hover {
+  background-image: url("../../../public/korean-agency.jpg");
+  background-size: 100% 100%;
+  color: #fefefe; }
+  .korean-agency:focus a, .korean-agency:hover a {
+    color: #fefefe; }
+
+.jdtrading:focus, .jdtrading:hover {
+  background-image: url("../../../public/jdtrading.jpg");
+  background-size: 100% 100%;
+  color: #fefefe; }
+  .jdtrading:focus a, .jdtrading:hover a {
+    color: #fefefe; }
+
+.heavenmeadow:focus, .heavenmeadow:hover {
+  background-image: url("../../../public/heavenmeadow.jpg");
+  background-size: 100% 100%;
+  color: #fefefe; }
+  .heavenmeadow:focus a, .heavenmeadow:hover a {
+    color: #fefefe; }
+
+.scortch:focus, .scortch:hover {
+  background-image: url("../../../public/scortch.jpg");
+  background-size: 100% 100%;
+  color: #fefefe; }
+  .scortch:focus a, .scortch:hover a {
+    color: #fefefe; }
+
+.chatty:focus, .chatty:hover {
+  background-image: url("../../../public/chatty.jpg");
+  background-size: 100% 100%;
+  color: #fefefe; }
+  .chatty:focus a, .chatty:hover a {
+    color: #fefefe; }
+
 .skills {
   background: #ece9e7;
   color: #181818;
@@ -199,6 +234,24 @@ ul {
   transition: all 0.8s ease-in-out; }
   .right-overlay .wrapper, .right-overlay #content1, .right-overlay #content2, .right-overlay #content3, .right-overlay #content4, .right-overlay #content5, .right-overlay #content6, .right-overlay #content7, .right-overlay #content8 {
     display: none; }
+  .right-overlay .content-wrapper img {
+    margin-top: 5%;
+    width: 100%; }
+  .right-overlay .content-wrapper img:first-child {
+    width: 100%;
+    margin-top: 15%; }
+  .right-overlay .project-title, .right-overlay .project-description, .right-overlay .project-tech, .right-overlay .project-link {
+    margin-top: 5%; }
+  .right-overlay .project-title {
+    font-size: 3.5em;
+    color: #b3a577; }
+  .right-overlay .project-description {
+    font-size: 1.5em; }
+  .right-overlay .project-tech {
+    font-size: 1.5em;
+    color: #b3a577; }
+  .right-overlay .project-link {
+    font-size: 1.5em; }
 
 .right-overlay.active {
   position: fixed;
@@ -215,8 +268,8 @@ ul {
   transition: all 0.8s ease-in-out; }
 
 .content-wrapper {
-  padding: 7%;
-  font-family: 'geomanistregular', sans-serif; }
+  font-family: 'geomanistregular', sans-serif;
+  padding: 7%; }
   .content-wrapper .content-title {
     margin-top: 20%;
     font-size: 1.8em; }
