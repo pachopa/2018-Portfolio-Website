@@ -60,11 +60,31 @@ a:hover {
 
 
 .right-container {
+  padding: 0;
   float: right;
   background: #ece9e7;
   font-family: 'geomanistregular', sans-serif;
+  .my-picture {
+    width: 100%;
+  }
   .education, .about-me, .right-section {
     display: block;
+  }
+  .about-me {
+    font-size: 2em;
+    padding: 5%;
+    margin-top: 10%;
+  }
+  .right-section {
+    margin-top: 10%;
+    padding: 5%;
+    font-size: 2em;
+    .name {
+      font-size: 3em;
+    }
+    a {
+      color: #b3a577;
+    }
   }
   label {
     width: 100%;
@@ -77,12 +97,28 @@ a:hover {
   }
 }
 
-.right-container.contact-me {
+.main-page {
+  color: #f2f2f2;
+  background-image: url("../../../public/chris2.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   height: 100%;
+  padding-right: 10%;
+}
+
+.aboutMe {
+  height: 100%;
+}
+
+.right-container.contact-me {
   padding: 3%;
+  height: 100%;
   .contact-me-section {
     p {
       margin-bottom: 5%;
+    }
+    p.intro {
+      margin-top: 5%;
     }
     .intro {
       font-size: 6em;
@@ -238,8 +274,30 @@ ul {
   .left-container {
     position: initial;
     height: 70%;
+    .position-title {
+      font-size: 1.5em!important;
+    }
   }
   .right-container {
     float: left;
+    height: unset!important;
+    .about-me {
+      font-size: 1.5em;
+    }
+  }
+  .skills .skills-content, .work .work-content {
+    font-size: 0.8em;
+  }
+  .right-overlay .project-title {
+    font-size: 3em;
+  }
+  .right-container.contact-me .contact-me-section .intro {
+    font-size: 5em;
+  }
+  .contact-me-section {
+    font-size: 0.8em;
+  }
+  p.intro {
+    margin-top: 0;
   }
 }

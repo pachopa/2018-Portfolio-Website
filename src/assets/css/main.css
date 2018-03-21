@@ -54,11 +54,26 @@ a:hover {
       margin-right: 10px; }
 
 .right-container {
+  padding: 0;
   float: right;
   background: #ece9e7;
   font-family: 'geomanistregular', sans-serif; }
+  .right-container .my-picture {
+    width: 100%; }
   .right-container .education, .right-container .about-me, .right-container .right-section {
     display: block; }
+  .right-container .about-me {
+    font-size: 2em;
+    padding: 5%;
+    margin-top: 10%; }
+  .right-container .right-section {
+    margin-top: 10%;
+    padding: 5%;
+    font-size: 2em; }
+    .right-container .right-section .name {
+      font-size: 3em; }
+    .right-container .right-section a {
+      color: #b3a577; }
   .right-container label {
     width: 100%; }
   .right-container .userName, .right-container .userEmail, .right-container .message {
@@ -66,11 +81,24 @@ a:hover {
   .right-container .typed, .right-container .typed2, .right-container .typed3 {
     float: left; }
 
-.right-container.contact-me {
+.main-page {
+  color: #f2f2f2;
+  background-image: url("../../../public/chris2.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   height: 100%;
-  padding: 3%; }
+  padding-right: 10%; }
+
+.aboutMe {
+  height: 100%; }
+
+.right-container.contact-me {
+  padding: 3%;
+  height: 100%; }
   .right-container.contact-me .contact-me-section p {
     margin-bottom: 5%; }
+  .right-container.contact-me .contact-me-section p.intro {
+    margin-top: 5%; }
   .right-container.contact-me .contact-me-section .intro {
     font-size: 6em;
     text-align: center;
@@ -192,8 +220,23 @@ ul {
   .left-container {
     position: initial;
     height: 70%; }
+    .left-container .position-title {
+      font-size: 1.5em !important; }
   .right-container {
-    float: left; } }
+    float: left;
+    height: unset !important; }
+    .right-container .about-me {
+      font-size: 1.5em; }
+  .skills .skills-content, .work .work-content {
+    font-size: 0.8em; }
+  .right-overlay .project-title {
+    font-size: 3em; }
+  .right-container.contact-me .contact-me-section .intro {
+    font-size: 5em; }
+  .contact-me-section {
+    font-size: 0.8em; }
+  p.intro {
+    margin-top: 0; } }
 
 .overlay {
   width: 100%;

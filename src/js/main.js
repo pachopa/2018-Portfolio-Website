@@ -26,7 +26,7 @@
     }, 700);
   }
 
-  $('a.link-page').click(function (e) {
+  $('a.link-page, .right-section a').click(function (e) {
     e.preventDefault();
     const url = $(this).attr("href");
     $('.overlay').addClass("firstLoading");
