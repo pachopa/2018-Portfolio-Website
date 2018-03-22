@@ -86,7 +86,7 @@ a:hover {
   background-image: url("../../../public/chris.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  height: auto;
+  height: 100%;
   padding-right: 10%; }
 
 .aboutMe {
@@ -226,10 +226,12 @@ ul {
     height: unset !important; }
     .right-container .about-me {
       font-size: 1.5em; }
+    .right-container .name {
+      font-size: 2em; }
   .skills .skills-content, .work .work-content {
     font-size: 0.8em; }
   .right-overlay .project-title {
-    font-size: 3em; }
+    font-size: 2.5em; }
   .right-container.contact-me .contact-me-section .intro {
     font-size: 5em; }
   .contact-me-section {
@@ -237,7 +239,8 @@ ul {
   p.intro {
     margin-top: 0; }
   .main-page {
-    background-color: #323232; } }
+    background-color: #323232;
+    background-size: 100% 60%; } }
 
 .overlay {
   width: 100%;
